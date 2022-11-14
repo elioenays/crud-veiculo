@@ -25,13 +25,13 @@ Criação de veiculo
 Rota do tipo POST -> /vehicle  
 Enviar no corpo da requisição os seguintes dados:
 
-    Tipo de veiculo (carro ou moto),
-    placa,
-    chassi,
-    renavam,
-    ano,
-    categoria (básico, intermediário),
-    cor,
-    direção (hidráulica ou manual),
-    nome pessoa que cadastrou,
-    motor (ex. 1.0, 1.4 etc)"
+      Tipo de veiculo (carro ou moto),
+      placa,
+      chassi,
+      renavam,
+      ano,
+      categoria (básico, intermediário),
+      cor,
+      direção (hidráulica ou manual),
+      nome pessoa que cadastrou,
+      motor (ex. 1.0, 1.4 etc)"

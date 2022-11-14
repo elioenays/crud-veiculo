@@ -4,18 +4,18 @@ Descrição: Cada aluno deve fazer uma API contendo todas as funções de um CRU
 
 Campos:
 
-- Id,
-- Tipo de veiculo (carro ou moto),
-- placa,
-- chassi,
-- renavam,
-- ano,
-- categoria (básico, intermediário),
-- cor,
-- direção (hidráulica ou manual),
-- data de criação,
-- nome pessoa que cadastrou,
-- motor (ex. 1.0, 1.4 etc)"
+    Id,
+    Tipo de veiculo (carro ou moto),
+    placa,
+    chassi,
+    renavam,
+    ano,
+    categoria (básico, intermediário),
+    cor,
+    direção (hidráulica ou manual),
+    data de criação,
+    nome pessoa que cadastrou,
+    motor (ex. 1.0, 1.4 etc)"
 
 ## Rotas
 

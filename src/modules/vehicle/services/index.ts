@@ -65,12 +65,41 @@ export default class VehicleService {
 
     return vehicle
   }
-  public async update(id: string) {
+  public async update(id: string, data: IVehicle) {
+    const {
+      type,
+      licensePlate,
+      chassis,
+      renavam,
+      year,
+      category,
+      color,
+      steeringWheel,
+      username,
+      motor,
+    } = data
+
     const vehicle = new Promise((resolve, reject) => {
-      db.query(`update vehicles where id=${id}`, (error, result) => {
-        if (error) return reject(error)
-        return resolve(result)
-      })
+      db.query(
+        `update vehicles set type = ?, license_plate= ?, chassis= ?, renavam= ?, 
+      year= ?, category= ?, color= ?, steering_wheel= ?, username= ?, motor where id=${id}`,
+        [
+          type,
+          licensePlate,
+          chassis,
+          renavam,
+          year,
+          category,
+          color,
+          steeringWheel,
+          username,
+          motor,
+        ],
+        (error, result) => {
+          if (error) return reject(error)
+          return resolve(result)
+        },
+      )
     })
 
     return vehicle

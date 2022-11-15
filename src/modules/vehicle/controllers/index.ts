@@ -1,11 +1,10 @@
 import { Request, Response } from 'express'
-import IVehicle from '../model'
 import VehicleService from '../services'
 
 const vehicleService = new VehicleService()
 export default class VehicleController {
   public async create(request: Request, response: Response) {
-    const data: IVehicle = request.body
+    const data = request.body
 
     const vehicle = await vehicleService.create(data)
 
@@ -25,7 +24,14 @@ export default class VehicleController {
     return response.json(vehicle)
   }
 
-  public async update(request: Request, response: Response) {}
+  public async update(request: Request, response: Response) {
+    const { id } = request.params
+    const data = request.body
+
+    const vehicle = await vehicleService.update(id, data)
+
+    return response.json(vehicle)
+  }
 
   public async delete(request: Request, response: Response) {
     const { id } = request.params

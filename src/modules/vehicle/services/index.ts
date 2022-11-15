@@ -20,7 +20,7 @@ export default class VehicleService {
 
     const vehicle = new Promise((resolve, reject) => {
       db.query(
-        `INSERT INTO crud_vehicles.vehicles (type, license_plate, chassis, renavam, 
+        `INSERT INTO crud_vehicles.vehicles (type, license_plate, chassis, renavam,
       year, category, color, steering_wheel, username, motor) VALUES (?,?,?,?,?,?,?,?,?,?);`,
         [
           type,
@@ -81,8 +81,8 @@ export default class VehicleService {
 
     const vehicle = new Promise((resolve, reject) => {
       db.query(
-        `update vehicles set type = ?, license_plate= ?, chassis= ?, renavam= ?, 
-      year= ?, category= ?, color= ?, steering_wheel= ?, username= ?, motor where id=${id}`,
+        `update vehicles set type = ?, license_plate= ?, chassis= ?, renavam= ?,
+      year= ?, category= ?, color= ?, steering_wheel= ?, username= ?, motor = ? where id=${id}`,
         [
           type,
           licensePlate,

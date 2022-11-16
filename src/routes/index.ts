@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import vehicleRoutes from '../modules/vehicle'
+import vehicleRoutes from '../vehicle'
 
 const routes = Router()
 

@@ -81,7 +81,7 @@ export default class VehicleService {
 
     const vehicle = new Promise((resolve, reject) => {
       db.query(
-        `update vehicles set type = ?, license_plate= ?, chassis= ?, renavam= ?,
+        `update vehicles set type = COALESCE(?,type), license_plate= COALESCE(?,license_plate), chassis= ?, renavam= ?,
       year= ?, category= ?, color= ?, steering_wheel= ?, username= ?, motor = ? where id=${id}`,
         [
           type,
